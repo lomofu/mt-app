@@ -1,7 +1,7 @@
 <template>
   <div class="index">
     <top-bar/>
-    <search-bar/>
+    <search-bar class="search"/>
   </div>
 </template>
 

@@ -2,13 +2,16 @@
   <el-row
     :gutter="0"
     class="m-header">
-    <el-col :span="5">
+    <el-col :span="4">
       <goe/>
     </el-col>
-    <el-col :span="5">
+    <el-col :span="4">
       <user/>
     </el-col>
-    <el-col :span="14">
+    <el-col :span="8">
+      <img src="../../../assets/img/logo.png" alt="logo" class="logo">
+    </el-col>
+    <el-col :span="8">
       <navbar/>
     </el-col>
   </el-row>
@@ -37,20 +40,6 @@
     line-height: 60px;
   }
 
-  .el-aside {
-    background-color: #D3DCE6;
-    color: #333;
-    text-align: center;
-    line-height: 200px;
-  }
-
-  .el-main {
-    background-color: #E9EEF3;
-    color: #333;
-    text-align: center;
-    line-height: 160px;
-  }
-
   body > .el-container {
     margin-bottom: 40px;
   }
@@ -62,5 +51,10 @@
 
   .el-container:nth-child(7) .el-aside {
     line-height: 320px;
+  }
+  .logo{
+    width: 35px;
+    height: auto;
+    margin-top: 15px;
   }
 </style>
