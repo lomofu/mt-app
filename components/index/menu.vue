@@ -1,86 +1,84 @@
 <template>
   <div class="m-menu">
-    <transition name="transfer">
-      <dl class="nav" @mouseleave="handleMouseleave">
-        <dt class="lab">全部分类</dt>
-        <dd class="item"
-            v-for="(item,index) in menu"
-            :key="index"
-            @mouseenter="handleMouseenter"
+    <dl class="nav" @mouseleave="handleMouseleave">
+      <dt class="lab">全部分类</dt>
+      <dd class="item"
+          v-for="(item,index) in menu"
+          :key="index"
+          @mouseenter="handleMouseenter"
+      >
+        <i :class="item.type"/>{{item.name}}
+        <span class="arrow"/>
+      </dd>
+    </dl>
+    <div class="detail" v-if="kind"
+    @mouseenter="handleDetailEnter"
+    @mouseleave="handleDetailLeave">
+      <template
+        v-for="(item,index) in curdetail.child"
+      >
+        <h4 :key="index">{{item.title}}</h4>
+        <span
+          v-for="(v,inx) in item.child "
+          :key="inx"
         >
-          <i :class="item.type"/>{{item.title}}
-          <span class="arrow"/>
-        </dd>
-      </dl>
-      <div class="detail">
-        <template v-for="(item,index) in curdetail.child">
-          <h4 :key="index">{{item.title}}</h4>
-          <span v-for="(i,inx) in item.child" :key="inx">
-            {{i}}
-          </span>
-        </template>
-      </div>
-    </transition>
+          {{v}}
+        </span>
+      </template>
+    </div>
   </div>
 </template>
 
 <script>
   export default {
-    name: "menu",
     data() {
       return {
         kind: '',
         menu: [{
           type: 'food',
-          title: '美食',
+          name: '美食',
           child: [{
-            title: '小吃',
-            child: ['汉堡', '冰淇淋', '自助餐']
-          }]
-        },
-          {
-            type: 'food',
             title: '美食',
-            child: [{
-              title: '小吃',
-              child: ['汉堡', '冰淇淋', '自助餐']
-            }]
-          },
-          {
-            type: 'food',
-            title: '美食'
-          },
-          {
-            type: 'food',
-            title: '美食'
-          },
-          {
-            type: 'food',
-            title: '美食'
-          },
-          {
-            type: 'food',
-            title: '美食'
+            child: ['代金券', '甜点饮品', '火锅', '自助餐', '小吃快餐']
           }]
+        }, {
+          type: 'takeout',
+          name: '外卖',
+          child: [{
+            title: '外卖',
+            child: ['美团外卖']
+          }]
+        }, {
+          type: 'hotel',
+          name: '酒店',
+          child: [{
+            title: '酒店星级',
+            child: ['经济型', '舒适/三星', '高档/四星', '豪华/五星']
+          }]
+        }]
       }
     },
     computed: {
-      curdetail: () => {
-        // console.log(this.menu)
-        return this.menu.filter(item => item.type ===this.kind)[0]
+      curdetail: function () {
+        return this.menu.filter(e => e.type === this.kind)[0];
       }
     },
     methods: {
-      handleMouseleave: () => {
+      handleMouseleave: function () {
         let me = this
         me._timer = setTimeout(() => {
           me.kind = ''
-        }, 150)
+        }, 200)
       },
-      handleMouseenter: (e) => {
+      handleMouseenter: function (e) {
         let me = this
-        console.log(e.target);
         me.kind = e.target.querySelector('i').className;
+      },
+      handleDetailEnter:function () {
+        clearTimeout(this._timer)
+      },
+      handleDetailLeave:function () {
+        this.kind=''
       }
     }
 
@@ -88,24 +86,6 @@
 </script>
 
 <style scoped>
-  .lab {
-    margin-bottom: 10px;
-  }
-
-  .nav {
-    background-color: #d8c5af;
-    color: white;
-    font-size: 20px;
-    font-weight: bold;
-    width: 90%;
-    margin-left: 10%;
-    text-shadow: 0 0 20px #00000021;
-    box-shadow: 0 0 20px 0px #0000001c;
-    background: linear-gradient(left, #a7937f, #e1d0bb);
-    background: -webkit-gradient(linear, left bottom, right top, from(#b09d89), to(#f6e5d0));
-    margin-top: -45px;
-  }
-
   .item {
     cursor: pointer;
     text-align: center;

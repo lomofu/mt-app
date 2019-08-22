@@ -3,11 +3,11 @@
       width: 230px;
       height: 475px;
       box-sizing: border-box;
-      margin-top: -50px;
       margin-left: 20px;
       color: #FFF;
       position: relative;
-      background: linear-gradient(-180deg, rgba(2, 181, 157, .85) 2%, rgba(22, 146, 183, .85) 100%);
+      background: linear-gradient(-215deg, rgba(185, 183, 119, 0.85) 10%, rgba(113, 169, 174, 0.85) 100%);
+      opacity: 0.89;
 
       dt {
         height: 50px;
@@ -172,6 +172,7 @@
         height: 416px;
         background: #fff;
         z-index: 9999;
+        box-shadow: 4px 2px 8px 0px #00000012;
 
         h4 {
           margin-top: 24px;

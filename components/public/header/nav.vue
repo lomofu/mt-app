@@ -1,5 +1,5 @@
 <template>
-  <div class="m-nav">
+  <div class="m-nav el-row ">
     <ul class="nav">
       <li class="list">
         <nuxt-link to="/my">我的美团</nuxt-link>
@@ -71,5 +71,5 @@
 </script>
 
 <style scoped>
-
+  @import "@/assets/css/public/layout.scss";
 </style>
