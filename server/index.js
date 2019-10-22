@@ -3,7 +3,9 @@ import Koa from 'koa'
 import config from  '../nuxt.config'
 import consola from 'consola'
 import {Nuxt, Builder} from 'nuxt'
-
+import CityInterface from './interface/city'
+import SearchInterface from './interface/search/search'
+import TagBarInterface from './interface/tagbar/tagbar'
 //Set Nuxt.js options
 const app = new Koa()
 config.dev = app.env !== 'production'
@@ -24,6 +26,10 @@ async function start () {
   } else {
     await nuxt.ready()
   }
+
+  app.use(CityInterface.routes()).use(CityInterface.allowedMethods())
+  app.use(SearchInterface.routes()).use(SearchInterface.allowedMethods())
+  app.use(TagBarInterface.routes()).use(TagBarInterface.allowedMethods())
 
   app.use((ctx) => {
     ctx.status = 200

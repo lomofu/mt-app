@@ -1,6 +1,160 @@
 # mt-app
 
+![im](img/1468246-20180921160956057-1177305617.png)
 
+
+
+![img](img/1468246-20180921153753073-848298598.png)
+
+
+
+
+
+## Quick Start
+
+
+
+> #### 创建nuxt工程
+
+1.全局安装nuxt脚手架
+
+```
+npm i -g npx
+```
+
+2.创建目录
+
+```
+npx create-nuxt-app 项目名称
+```
+
+
+
+> 其他配置
+
+
+
+1.如果使用css预处理器，如sass，就需要安装sass的相关插件
+
+```
+npm i sass-loader node-sass --save-dev
+```
+
+
+
+2.使用es6的import/export
+
+使用依赖     `"babel-preset-es2015": "^6.24.1”`
+
+```
+npm install babel-preset-es2015
+```
+
+
+
+创建.babelrc文件
+
+```
+{
+  "presets": ["es2015"]
+}
+
+```
+
+
+
+> nuxt 配置文件
+
+```
+module.exports = {
+  mode: 'universal',
+  /*
+  ** Headers of the page
+  */
+  head: {
+    title: process.env.npm_package_name || '',
+    meta: [
+      {charset: 'utf-8'},
+      {name: 'viewport', content: 'width=device-width, initial-scale=1'},
+      {hid: 'description', name: 'description', content: process.env.npm_package_description || ''}
+    ],
+    link: [
+      {rel: 'icon', type: 'image/x-icon', href: '/favicon.ico'}
+    ]
+  },
+  rules: [
+    {test: /\.vue$/,loader: "vue-loader"},
+    {test: /\.css$/,use: ["vue-style-loader", "css-loader"]  }
+  ],
+  /*
+  ** Customize the progress-bar color
+  */
+  loading: {color: '#fff'},
+  /*
+  ** Global CSS
+  */
+  css: [
+    //element-ui配置
+    'element-ui/lib/theme-chalk/reset.css',
+    'element-ui/lib/theme-chalk/index.css',
+    //css静态文件入口
+    '@/assets/css/main.css'
+  ],
+  /*
+  ** Plugins to load before mounting the App
+  */
+  plugins: [
+    '@/plugins/element-ui'
+  ],
+  /*
+  ** Nuxt.js dev-modules
+  */
+  devModules: [],
+  /*
+   ** axios
+   */
+  axios: {
+    //axios
+  },
+  /*
+  ** Nuxt.js modules
+  */
+  modules: [
+   '@nuxtjs/axios'
+  ],
+  /*
+  ** Build configuration
+  */
+  build: {
+    transpile: [/^element-ui/],
+    /*
+    ** You can extend webpack config here
+    */
+    extend(config, ctx) {
+    }
+  },
+  开启缓存
+  cache: true
+}
+
+```
+
+
+
+> package.json
+
+```
+ "scripts": {
+    "dev": "cross-env NODE_ENV=development nodemon server/index.js --watch server --exec babel-node",
+    "build": "nuxt build",
+    "start": "cross-env NODE_ENV=production node server/index.js --exec babel-node",
+    "generate": "nuxt generate"
+  },
+```
+
+
+
+## 版本
 
 ### Dev. 1.0
 

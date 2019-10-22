@@ -2,7 +2,6 @@
   <div class="search-panel">
     <el-row class="m-header-searchbar" type="flex" justify="center">
       <el-col class="center">
-        <transition name="slide-fade">
           <el-autocomplete
             class="inline-input"
             v-model="input"
@@ -11,7 +10,6 @@
             @select="handleSelect"
           ><i slot="prefix" class="el-input__icon el-icon-search"></i>
           </el-autocomplete>
-        </transition>
         <el-button type="primary" icon="el-icon-search" class="button" @click="handleClick">
         </el-button>
       </el-col>
@@ -39,6 +37,9 @@
 </template>
 
 <script>
+
+  import axios from 'axios'
+
   export default {
     name: "search",
     data() {
@@ -60,14 +61,6 @@
           return (recommend.value.toLowerCase().indexOf(queryString.toLowerCase()) === 0);
         };
       },
-      loadAll() {
-        return [
-          {"value": "三全鲜食（北新泾店）", "address": "长宁区新渔路144号"},
-          {"value": "Hot honey 首尔炸鸡（仙霞路）", "address": "上海市长宁区淞虹路661号"},
-          {"value": "新旺角茶餐厅", "address": "上海市普陀区真北路988号创邑金沙谷6号楼113"},
-          {"value": "泷千家(天山西路店)", "address": "天山西路438号"},
-        ];
-      },
       handleSelect(item) {
         console.log(item.value + item.address);
       },
@@ -75,10 +68,26 @@
         this.show = !this.show;
       }
     },
-    mounted() {
-      this.recommend = this.loadAll();
+    //TODO
+    // async asyncData(){
+    //   let {status,data:{list}} = await axios.get('/api/search');
+    //   if (status === 200) {
+    //     return {
+    //       recommend:list
+    //     };
+    //   } else {
+    //     window.alert('服务器异常');
+    //   }
+    // },
+    async mounted() {
+      let response = await axios.get('/api/search');
+      if (response.status===200){
+        this.recommend = response.data;
+      }else {
+        window.alert('服务器异常');
+      }
     }
-  }
+  };
 </script>
 
 <style scoped>

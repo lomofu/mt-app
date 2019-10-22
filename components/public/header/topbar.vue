@@ -12,7 +12,7 @@
       <img src="../../../assets/img/logo.png" alt="logo" class="logo">
     </el-col>
     <el-col :span="8">
-      <Nav/>
+      <my-nav/>
     </el-col>
   </el-row>
 </template>
@@ -20,13 +20,13 @@
 <script>
   import Goe from './goe.vue'
   import User from './user.vue'
-  import Nav from './nav.vue'
+  import MyNav from './nav.vue'
 
   export default {
     components: {
       Goe,
       User,
-      Nav
+      MyNav
     }
   }
 </script>

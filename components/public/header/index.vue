@@ -13,7 +13,7 @@
     name: "index",
     components: {
       TopBar,
-        SearchBar
+      SearchBar
     }
   }
 </script>
