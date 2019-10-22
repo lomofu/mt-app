@@ -8,6 +8,7 @@
       position: relative;
       background: linear-gradient(-215deg, rgba(185, 183, 119, 0.85) 10%, rgba(113, 169, 174, 0.85) 100%);
       opacity: 0.89;
+      z-index: 3;
 
       dt {
         height: 50px;
@@ -205,4 +206,10 @@
         height: 240px;
       }
     }
+  .showcard{
+   margin: 10px auto auto 4px ;
+  }
+
+
+
 }

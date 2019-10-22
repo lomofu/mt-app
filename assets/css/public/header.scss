@@ -366,6 +366,7 @@
             display: none;
             text-align: left;
 
+
             &:before {
               content: ' ';
               display: block;
@@ -375,6 +376,7 @@
               position: absolute;
               top: -1px;
               right: 0;
+
             }
 
             >dl {

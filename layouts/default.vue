@@ -1,9 +1,9 @@
 <template>
   <el-container>
-    <el-header>
+    <el-header class="header">
       <my-header></my-header>
     </el-header>
-    <el-main>
+    <el-main class="main">
       <nuxt/>
     </el-main>
   </el-container>
@@ -16,3 +16,8 @@
     }
   }
 </script>
+<style scoped>
+  .main{
+    margin-top: 120px;
+  }
+</style>

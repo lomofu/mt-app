@@ -66,7 +66,6 @@
         }
 
         &.list:hover {
-          border: 1px solid #E5E5E5;
           border-top: none;
 
           >dl {
@@ -75,6 +74,7 @@
 
           .subContainer {
             display: flex;
+            box-shadow: 2px 5px 5px 0px #0000001f;
           }
         }
 

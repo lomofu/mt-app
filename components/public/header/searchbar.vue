@@ -4,7 +4,6 @@
       <el-col class="center">
         <transition name="slide-fade">
           <el-autocomplete
-            v-show="show"
             class="inline-input"
             v-model="input"
             :fetch-suggestions="querySearch"
@@ -14,7 +13,6 @@
           </el-autocomplete>
         </transition>
         <el-button type="primary" icon="el-icon-search" class="button" @click="handleClick">
-          <span v-show="!show">搜索</span>
         </el-button>
       </el-col>
     </el-row>
@@ -47,7 +45,6 @@
       return {
         recommend: [],
         input: '',
-        show: false
       }
     },
     methods: {
