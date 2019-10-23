@@ -95,7 +95,7 @@
 
 <style scoped>
   .search-panel {
-    box-shadow: 0px 9px 9px 0px rgba(0, 0, 0, 0.03);
+    box-shadow: 0px 9px 9px 0px rgba(0, 0, 0, 0.12);
   }
 
   li {

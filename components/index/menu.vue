@@ -4,7 +4,7 @@
       <dt class="lab">全部分类</dt>
       <dd class="item"
           v-for="(item,index) in menu"
-          :key="index"
+          :key="'mu'+index"
           @mouseenter="handleMouseenter"
       >
         <i :class="item.type"/>{{item.name}}
@@ -17,7 +17,7 @@
       <template
         v-for="(item,index) in curdetail.child"
       >
-        <h4 :key="index">{{item.title}}</h4>
+        <h4 :key="'child'+index">{{item.title}}</h4>
         <span
           v-for="(v,inx) in item.child "
           :key="inx"

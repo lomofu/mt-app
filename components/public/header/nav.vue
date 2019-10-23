@@ -3,7 +3,7 @@
     <ul class="nav">
       <li class="list">
         <nuxt-link to="/my">我的美团</nuxt-link>
-        <dl>
+        <dl class="s-list hvr-hang animated fadeInUp">
           <dd><nuxt-link to="/order">我的订单</nuxt-link></dd>
           <dd><nuxt-link to="/order">我的收藏</nuxt-link></dd>
           <dd><nuxt-link to="/order">抵用券</nuxt-link></dd>
@@ -15,7 +15,7 @@
       </li>
       <li class="list bd">
         <nuxt-link to="/center">商家中心</nuxt-link>
-        <dl>
+        <dl class="s-list hvr-hang animated fadeInUp">
           <dd><nuxt-link to ="/userCenter">登陆商家中心</nuxt-link></dd>
           <dd><nuxt-link to="/coop">我想合作</nuxt-link></dd>
           <dd><nuxt-link to="/wap">免费手机开店</nuxt-link></dd>
@@ -23,7 +23,7 @@
       </li>
       <li class="list site">
         <nuxt-link to="/site">网站导航</nuxt-link>
-        <div class="subContainer">
+        <div class="subContainer hvr-hang animated fadeInUp">
           <dl class="hotel">
             <dt>标题</dt>
             <dd>1</dd>
@@ -66,7 +66,7 @@
 
 <script>
     export default {
-        name: "nav"
+        name: "mynav"
     }
 </script>
 

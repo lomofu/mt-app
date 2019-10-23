@@ -1,7 +1,7 @@
 .page-index{
     .m-menu {
       width: 230px;
-      min-height: 480px;
+      min-height: 486px;
       box-sizing: border-box;
       margin-left: 20px;
       color: #FFF;
@@ -36,6 +36,7 @@
       }
 
       .nav {
+
         dd>i {
           font-family: 'meituan';
           font-size: 14px;
@@ -207,7 +208,7 @@
       }
     }
   .showcard{
-   margin: 10px auto auto 4px ;
+   margin: 15px auto auto 4px ;
   }
 
   .tagbar{
@@ -216,7 +217,7 @@
     max-width: 97.5%;
 
     .el-tabs__nav-scroll {
-      background: #9e8b77;
+       background: linear-gradient(-215deg, rgba(113, 169, 174, 0.85) 8%, rgba(185, 183, 119, 0.85) 100%);
     }
 
     .el-tabs--border-card>.el-tabs__header {
@@ -224,7 +225,7 @@
         color: white;
       }
       .is-active{
-        color: black;
+        color: #4f4f4f;
       }
     }
 

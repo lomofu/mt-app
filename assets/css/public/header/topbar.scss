@@ -46,6 +46,7 @@
     margin: 0;
     padding: 0;
     z-index: 999;
+
     .nav {
       list-style: none;
       float: right;
@@ -66,15 +67,22 @@
         }
 
         &.list:hover {
-          border-top: none;
+          .s-list{
+            box-shadow: 2px 3px 4px 0px #0000001a;
+            animation-duration: 400ms;//时间
+            animation-delay: 100ms;
+          }
 
-          >dl {
+
+          > dl {
             display: block;
           }
 
           .subContainer {
             display: flex;
             box-shadow: 2px 5px 5px 0px #0000001f;
+            animation-duration: 400ms;//时间
+            animation-delay: 100ms;
           }
         }
 
@@ -134,7 +142,7 @@
           position: relative;
           left: -1175px;
           z-index: 999;
-          border: 1px solid #e5e5e5;
+          //border: 1px solid rgba(20, 20, 20, 0.16);
           display: none;
           text-align: left;
 

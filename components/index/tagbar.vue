@@ -5,8 +5,8 @@
         <span slot="label"><i class="el-icon-guide"/>全部</span>
       </el-tab-pane>
       <template>
-        <el-tab-pane v-for="item in list"
-                     :key="item"
+        <el-tab-pane v-for="(item,index) in list"
+                     :key="index"
                      :label="item.label"
         >
           <el-row :gutter="240">
@@ -14,7 +14,7 @@
               <el-col :span="5"
                       v-for="(val,index) in item.value"
                       :key="index"
-                      class="magictime slideDownRetourn"
+                      class="animated fadeInUp" style="animation-duration: 400ms"
               >
 
                 <el-card class="card hvr-grow-shadow">

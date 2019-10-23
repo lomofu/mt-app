@@ -194,3 +194,9 @@ module.exports = {
 ### Dev 1.14
 
 实现搜索数据接口,展示栏数据接口,引入hover.css,调整tagbar布局
+
+
+
+### Dev 1.20
+
+完成index首页，增加空白布局，正在完善注册页面
