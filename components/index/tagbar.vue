@@ -5,10 +5,31 @@
         <span slot="label"><i class="el-icon-guide"/>全部</span>
       </el-tab-pane>
       <template>
-        <el-tab-pane v-for="(item,index) in list"
+        <el-tab-pane v-for="item in list"
                      :key="item"
                      :label="item.label"
-        >{{item.value}}</el-tab-pane>
+        >
+          <el-row :gutter="240">
+            <template>
+              <el-col :span="5"
+                      v-for="(val,index) in item.value"
+                      :key="index"
+                      class="magictime slideDownRetourn"
+              >
+
+                <el-card class="card hvr-grow-shadow">
+                  <img src="https://shadow.elemecdn.com/app/element/hamburger.9cf7b091-55e9-11e9-a976-7f4d0b07eef6.png" class="image">
+                  <div>
+                    <span>  {{val}}</span>
+                    <div class="bottom clearfix">
+                      <el-button type="text" class="button">操作按钮</el-button>
+                    </div>
+                  </div>
+                </el-card>
+              </el-col>
+            </template>
+          </el-row>
+        </el-tab-pane>
       </template>
     </el-tabs>
   </div>
@@ -17,7 +38,9 @@
 <script>
 
   import axios from 'axios'
-
+  if (process.browser) { // 在这里根据环境引入wow.js
+      var {WOW} = require('wowjs')
+  }
   export default {
     name: "tagbar",
     data(){
@@ -31,15 +54,26 @@
       this.lab = tab.label;
   }
     },
-    async mounted() {
+    async created() {
         let promise = await axios.get('/api/tagbar');
         if (promise.status===200){
           this.list = promise.data;
         }
-    }
+    },
+      mounted() {
+          if (process.browser) {  // 在页面mounted生命周期里面 根据环境实例化WOW
+              new WOW({
+                  live: true,
+                  offset: 0
+              }).init()
+          }
+      }
   }
 </script>
 
 <style>
-
+.card{
+  width:270px;
+  margin-bottom: 40px;;
+}
 </style>

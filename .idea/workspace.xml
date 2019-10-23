@@ -4,34 +4,20 @@
     <list default="true" id="0c5a64c1-f9a5-4002-ac16-f3fc15eb9503" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.nuxt/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/.nuxt/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.nuxt/client.js" beforeDir="false" afterPath="$PROJECT_DIR$/.nuxt/client.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.nuxt/components/no-ssr.js" beforeDir="false" afterPath="$PROJECT_DIR$/.nuxt/components/no-ssr.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.nuxt/components/nuxt-build-indicator.vue" beforeDir="false" afterPath="$PROJECT_DIR$/.nuxt/components/nuxt-build-indicator.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.nuxt/components/nuxt-child.js" beforeDir="false" afterPath="$PROJECT_DIR$/.nuxt/components/nuxt-child.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.nuxt/components/nuxt-error.vue" beforeDir="false" afterPath="$PROJECT_DIR$/.nuxt/components/nuxt-error.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.nuxt/components/nuxt-link.client.js" beforeDir="false" afterPath="$PROJECT_DIR$/.nuxt/components/nuxt-link.client.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.nuxt/components/nuxt-link.server.js" beforeDir="false" afterPath="$PROJECT_DIR$/.nuxt/components/nuxt-link.server.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.nuxt/components/nuxt-loading.vue" beforeDir="false" afterPath="$PROJECT_DIR$/.nuxt/components/nuxt-loading.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.nuxt/components/nuxt.js" beforeDir="false" afterPath="$PROJECT_DIR$/.nuxt/components/nuxt.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.nuxt/empty.js" beforeDir="false" afterPath="$PROJECT_DIR$/.nuxt/empty.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.nuxt/axios.js" beforeDir="false" afterPath="$PROJECT_DIR$/.nuxt/axios.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.nuxt/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/.nuxt/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.nuxt/loading.html" beforeDir="false" afterPath="$PROJECT_DIR$/.nuxt/loading.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.nuxt/middleware.js" beforeDir="false" afterPath="$PROJECT_DIR$/.nuxt/middleware.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.nuxt/router.js" beforeDir="false" afterPath="$PROJECT_DIR$/.nuxt/router.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.nuxt/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/.nuxt/server.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.nuxt/utils.js" beforeDir="false" afterPath="$PROJECT_DIR$/.nuxt/utils.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.nuxt/views/app.template.html" beforeDir="false" afterPath="$PROJECT_DIR$/.nuxt/views/app.template.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.nuxt/views/error.html" beforeDir="false" afterPath="$PROJECT_DIR$/.nuxt/views/error.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/index/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/index/index.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/public/header.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/public/header.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/public/header/topbar.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/public/header/topbar.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/public/header/goe.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/public/header/goe.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/public/header/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/public/header/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/index/menu.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/index/menu.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/index/showcard.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/index/showcard.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/index/tagbar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/index/tagbar.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/public/footer/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/public/footer/index.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/public/header/searchbar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/public/header/searchbar.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/public/header/topbar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/public/header/topbar.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/public/header/user.vue" beforeDir="false" afterPath="$PROJECT_DIR$/components/public/header/user.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/layouts/default.vue" beforeDir="false" afterPath="$PROJECT_DIR$/layouts/default.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nuxt.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/nuxt.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/interface/tagbar/tagbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/interface/tagbar/tagbar.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -58,7 +44,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="editor.config.ad.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/assets/css/public" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -67,6 +53,9 @@
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\project\mt-app\assets\css\public" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\project\mt-app\assets\img\showcard" />
       <recent name="D:\project\mt-app\assets\img" />
@@ -129,7 +118,11 @@
       <workItem from="1566129909638" duration="3328000" />
       <workItem from="1566139700794" duration="4552000" />
       <workItem from="1566221671200" duration="5378000" />
-      <workItem from="1571709307717" duration="12444000" />
+      <workItem from="1571709307717" duration="13036000" />
+      <workItem from="1571793561962" duration="601000" />
+      <workItem from="1571799644395" duration="163000" />
+      <workItem from="1571799863206" duration="9814000" />
+      <workItem from="1571814754844" duration="111000" />
     </task>
     <servers />
   </component>
@@ -141,7 +134,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>

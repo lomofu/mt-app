@@ -68,25 +68,28 @@
         this.show = !this.show;
       }
     },
-    //TODO
-    // async asyncData(){
-    //   let {status,data:{list}} = await axios.get('/api/search');
-    //   if (status === 200) {
-    //     return {
-    //       recommend:list
-    //     };
-    //   } else {
-    //     window.alert('服务器异常');
-    //   }
-    // },
-    async mounted() {
-      let response = await axios.get('/api/search');
-      if (response.status===200){
-        this.recommend = response.data;
-      }else {
-        window.alert('服务器异常');
-      }
-    }
+    async created() {
+          let response = await axios.get('/api/search');
+          if (response.status === 200) {
+              this.recommend = response.data;
+          } else {
+              window.alert('服务器异常');
+          }
+      },
+      //TODO
+      // async asyncData(){
+      //     debugger
+      //     //let {data} = await axios.get('http://localhost:3000/api/search');
+      //     console.log(await axios.get('http://localhost:3000/api/search'))
+      //   // let {status,data:{list}} = await axios.get('/api/search');
+      //   // if (status === 200) {
+      //   //   return {
+      //   //     recommend:list
+      //   //   };
+      //   // } else {
+      //   //   window.alert('服务器异常');
+      //   // }
+      // },
   };
 </script>
 

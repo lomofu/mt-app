@@ -1,13 +1,17 @@
 import Vue from 'vue'
 import NuxtLoading from './components/nuxt-loading.vue'
 
-import '../node_modules/element-ui/lib/theme-chalk/reset.css'
+import '..\\node_modules\\element-ui\\lib\\theme-chalk\\reset.css'
 
-import '../node_modules/element-ui/lib/theme-chalk/index.css'
+import '..\\node_modules\\element-ui\\lib\\theme-chalk\\index.css'
 
-import '../assets/css/main.css'
+import '..\\node_modules\\hover.css\\css\\hover.css'
 
-import _6f6c098b from '../layouts/default.vue'
+import '..\\node_modules\\animate.css\\animate.css'
+
+import '..\\assets\\css\\main.css'
+
+import _6f6c098b from '..\\layouts\\default.vue'
 
 const layouts = { "_default": _6f6c098b }
 

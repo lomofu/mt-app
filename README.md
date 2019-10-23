@@ -47,6 +47,11 @@ npm i sass-loader node-sass --save-dev
 使用依赖     `"babel-preset-es2015": "^6.24.1”`
 
 ```
+npm i babel-cli // 这是babel解释器的客户端主程序  
+npm i babel-core // babel的核心文件,好像默认会自动安装 
+npm i babel-preset-es2015 // 把代码转换成ES6 
+npm i babel-preset-stage-0// 把代码转换成ES7
+
 npm install babel-preset-es2015
 ```
 
@@ -183,3 +188,9 @@ module.exports = {
 ### Dev 1.13
 
 调整导航栏布局,删除搜索交互,增加轮播卡和卡片
+
+
+
+### Dev 1.14
+
+实现搜索数据接口,展示栏数据接口,引入hover.css,调整tagbar布局

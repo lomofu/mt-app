@@ -17,11 +17,11 @@
 
   <el-row :gutter="140">
     <el-col :span="7"  v-for="(o,index) in 3" :key="o" :offset="index > 0 ? 1:0">
-      <div class="staticard">
+      <div class="staticard hvr-grow-shadow">
         <el-card class="box-card">
           <div   v-for="(item,index) in src"
                  :key="index"
-                 class="text item">
+                >
             <el-image :src="item"/>
           </div>
         </el-card>
@@ -102,3 +102,4 @@
 
   }
 </style>
+
