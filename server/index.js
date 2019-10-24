@@ -27,6 +27,7 @@ async function start () {
     await nuxt.ready()
   }
 
+
   app.use(CityInterface.routes()).use(CityInterface.allowedMethods())
   app.use(SearchInterface.routes()).use(SearchInterface.allowedMethods())
   app.use(TagBarInterface.routes()).use(TagBarInterface.allowedMethods())

@@ -1,31 +1,48 @@
-.res-header{
+.res-header {
 
   background: white;
   box-shadow: 0px 2px 8px 1px #00000047;
 
-  .el-breadcrumb{
-      font-size: 16px;
-      line-height: 4;
-      margin-left: 10px;
-    }
+  .el-breadcrumb {
+    font-size: 16px;
+    line-height: 4;
+    margin-left: 10px;
+  }
 
 }
 
-.res-panel{
+.res-panel {
   margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
 
-  .res-panel-step{
+  .res-panel-step {
     margin-left: 10%;
     max-width: 80%;
+    height: 100%;
   }
 
 
-  .res-panel-form{
+  .res-panel-form {
     border: 1px solid #0000000d;
     margin-top: 30px;
     padding: 30px;
     box-shadow: 0px 7px 2px 0px rgba(0, 0, 0, 0.15);
 
+
+    .step1 {
+      .step1-info {
+        margin-top: 20%;
+        font-size: larger;
+        color: gray;
+        height: auto;
+      }
+
+      .step2 {
+        height: auto;
+      }
+    }
 
   }
 

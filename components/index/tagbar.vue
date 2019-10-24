@@ -38,9 +38,7 @@
 <script>
 
   import axios from 'axios'
-  if (process.browser) { // 在这里根据环境引入wow.js
-      var {WOW} = require('wowjs')
-  }
+
   export default {
     name: "tagbar",
     data(){
@@ -59,15 +57,7 @@
         if (promise.status===200){
           this.list = promise.data;
         }
-    },
-      mounted() {
-          if (process.browser) {  // 在页面mounted生命周期里面 根据环境实例化WOW
-              new WOW({
-                  live: true,
-                  offset: 0
-              }).init()
-          }
-      }
+    }
   }
 </script>
 
