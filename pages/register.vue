@@ -12,7 +12,7 @@
 <script>
 
   import ResHeader from '../components/register/header.vue';
-  import ResPanel from '../components/register/panel.vue'
+  import ResPanel from '../components/register/register.vue'
 
     export default {
       name: "register",

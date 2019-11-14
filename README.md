@@ -206,3 +206,8 @@ module.exports = {
 ### Dev 1.21
 
 完成注册页面，还差密码校验,创建用户接口中。。。
+
+### Dev 1.22
+
+完成用户注册接口，重写注册页面，集成mongodb，redis，bodypareser，passport，session
+

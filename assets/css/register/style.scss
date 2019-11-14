@@ -12,41 +12,32 @@
 }
 
 .res-panel {
-  margin-top: 50px;
-  margin-left: auto;
-  margin-right: auto;
-  width: 80%;
+  margin: 50px auto 0;
+  width: 600px;
+  min-width: 500px;
+  max-width: 800px;
+  background: white;
+  text-align: left;
 
-  .res-panel-step {
-    margin-left: 10%;
-    max-width: 80%;
-    height: 100%;
+
+  .res-title {
+    font-size: 30px;
+    font-weight: bolder;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #4f4f4f;
   }
 
-
-  .res-panel-form {
-    border: 1px solid #0000000d;
-    margin-top: 30px;
-    padding: 30px;
-    box-shadow: 0px 7px 2px 0px rgba(0, 0, 0, 0.15);
-
-
-    .step1 {
-      .step1-info {
-        margin-top: 20%;
-        font-size: larger;
-        color: gray;
-        height: auto;
-      }
-
-      .step2 {
-        height: auto;
-      }
-    }
-
+  .ruleForm {
+    text-align: left;
+    max-width: 750px;
+    width: 500px;
+    min-width: 450px;
   }
+
 
 }
+
 
 
 

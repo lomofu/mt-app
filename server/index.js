@@ -1,6 +1,15 @@
 //import
 import Koa from 'koa'
-import config from  '../nuxt.config'
+import moogonse from 'mongoose'
+import bodyParser from 'koa-bodyparser'
+import session from 'koa-generic-session'
+import Redis from 'koa-redis'
+import json from 'koa-json'
+import dbConfig from './dbs/dbConfig'
+import passport from './interface/utils/passport'
+import User from './interface/user/user'
+
+import config from '../nuxt.config'
 import consola from 'consola'
 import {Nuxt, Builder} from 'nuxt'
 import CityInterface from './interface/city'
@@ -10,7 +19,7 @@ import TagBarInterface from './interface/tagbar/tagbar'
 const app = new Koa()
 config.dev = app.env !== 'production'
 
-async function start () {
+async function start(fn) {
   // Instantiate nuxt.js
   const nuxt = new Nuxt(config)
 
@@ -18,6 +27,25 @@ async function start () {
     host = process.env.HOST || '127.0.0.1',
     port = process.env.PORT || 3000
   } = nuxt.options.server
+
+  app.keys = ['mt', 'keyskeys']
+  app.proxy = true
+  app.use(session({
+    key: 'mt',
+    prefix: 'mt:uid',
+    store: new Redis()
+  }))
+  app.use(bodyParser({
+    extendTypes: ['json', 'form', 'text']
+  }))
+  app.use(json())
+
+  moogonse.connect(dbConfig.mongod.connect, {
+    userNewUrlParser: true
+  })
+
+  app.use(passport.initialize())
+  app.use(passport.session())
 
   // Build in development
   if (config.dev) {
@@ -27,7 +55,7 @@ async function start () {
     await nuxt.ready()
   }
 
-
+  app.use(User.routes).use(User.allowedMethods())
   app.use(CityInterface.routes()).use(CityInterface.allowedMethods())
   app.use(SearchInterface.routes()).use(SearchInterface.allowedMethods())
   app.use(TagBarInterface.routes()).use(TagBarInterface.allowedMethods())
